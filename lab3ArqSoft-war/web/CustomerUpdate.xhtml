@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Facelet Title</title>
+    </h:head>
+    <h:body>
+        Hello from Facelets<f:view>
+
+
+            <h:form>
+                <h1><h:outputText value="Create/Edit"/></h1>
+                <p:panelGrid columns="2">
+                    <p:outputLabel value="CustomerId:" for="customerId" />
+                    <p:inputText id="customerId" value="#{customerBean.details.customerId}" title="CustomerId" required="true" requiredMessage="The CustomerId field is required."/>
+                    <p:outputLabel value="Name:" for="name" />
+                    <p:inputText id="name" value="#{customerBean.details.name}" title="Name" />
+                    <p:outputLabel value="Addressline1:" for="addressline1" />
+                    <p:inputText id="addressline1" value="#{customerBean.details.addressline1}" title="Addressline1" />
+                    <p:outputLabel value="Addressline2:" for="addressline2" />
+                    <p:inputText id="addressline2" value="#{customerBean.details.addressline2}" title="Addressline2" />
+                    <p:outputLabel value="City:" for="city" />
+                    <p:inputText id="city" value="#{customerBean.details.city}" title="City" />
+                    <p:outputLabel value="State:" for="state" />
+                    <p:inputText id="state" value="#{customerBean.details.state}" title="State" />
+                    <p:outputLabel value="Phone:" for="phone" />
+                    <p:inputText id="phone" value="#{customerBean.details.phone}" title="Phone" />
+                    <p:outputLabel value="Fax:" for="fax" />
+                    <p:inputText id="fax" value="#{customerBean.details.fax}" title="Fax" />
+                    <p:outputLabel value="Email:" for="email" />
+                    <p:inputText id="email" value="#{customerBean.details.email}" title="Email" />
+                    <p:outputLabel value="CreditLimit:" for="creditLimit" />
+                    <p:inputText id="creditLimit" value="#{customerBean.details.creditLimit}" title="CreditLimit" />
+                    <p:outputLabel value="DiscountCode:" for="discountCode" />
+                    <p:selectOneMenu id="discountCode" value="#{customerBean.details.discountCode}" required="true" requiredMessage="The DiscountCode field is required.">
+                        <!-- TODO: update below reference to list of available items-->
+                        <f:selectItems value="#{fixme}"/>
+                    </p:selectOneMenu>
+                    <p:outputLabel value="Zip:" for="zip" />
+                    <p:selectOneMenu id="zip" value="#{customerBean.details.zip}" required="true" requiredMessage="The Zip field is required.">
+                        <!-- TODO: update below reference to list of available items-->
+                        <f:selectItems value="#{fixme}"/>
+                    </p:selectOneMenu>
+                </p:panelGrid>
+            </h:form>
+        </f:view>
+
+    </h:body>
+</html>
+
